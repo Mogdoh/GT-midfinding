@@ -3,5 +3,5 @@
 리액트 시작!
 
 ```
-vite run dev
+npm run dev
 ```
