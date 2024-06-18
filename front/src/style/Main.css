@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+
+body {
+    background: #ffb82e;
+    max-width: 900px;
+    margin: 0 auto; 
+}
+
+.mid-title {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    margin-top: 5%;
+    /* font-weight: bold; */
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* color: #36454F; */
+}
+
+.main-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .friend-mid {
+    width: 25rem;
+    height: 30rem;
+    background: #ffffff;
+    border-radius: 30px;
+    margin: 15% 3% 0 10%;
+} */
+
+
+.location-mid {
+    width: 25rem;
+    height: 32rem;
+    background: #FAF4E1;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 10px 35px 35px 2px rgba(0, 0, 0, 0.2), inset 0px -8px 16px 0px rgba(0, 0, 0, 0.1), inset 0px 11px 28px 0px rgb(204, 204, 204);
+    margin: 15% 3% 0 10%;
+}
+
+.location-mid img {
+    width: 20rem;
+    height: 20rem;
+    margin: 4% 3% 0 2%;
+}
+
+
+.location-title {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    text-align: center;
+    margin: 3% 0 3% 0;
+}
+
+
+.location-detail {
+    margin: 0 10% 0 10%;
+    text-align: center;
+}
