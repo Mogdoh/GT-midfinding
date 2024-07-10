@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { findCenter } from '../api/MapApi';
 import PostCode from '../components/PostCode';
 import '../style/SearchPage.css';
+import ShareMiddlePoint from '../components/ShareMiddlePoint';
+import ShareIcon from '../images/free-icon-share-1828960.png';
 
 declare global {
   interface Window {
@@ -116,7 +118,7 @@ const SearchPage = () => {
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=f0f31cc5416f1f0f93f26f887c5557a0&libraries=services&autoload=false`; // env 설정
+    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${import.meta.env.VITE_APP_KAKAO_API_KEY}&libraries=services&autoload=false`; // env 설정
     script.async = true;
     document.head.appendChild(script);
 
@@ -127,13 +129,14 @@ const SearchPage = () => {
           center: new window.kakao.maps.LatLng(37.566826, 126.9786567), // 초기 중심 좌표
           level: 3, // 지도 확대 정도
         };
-        map = new window.kakao.maps.Map(container, options);
-        console.log('카카오 API 지도 로드 완료');
+        map = new window.kakao.maps.Map(container, options); // 지도 생성
+        const mapTypeControl = new window.kakao.maps.MapTypeControl(); // 일반 지도랑 스카이뷰 지도 타입을 전환할 수 있는 지도타입 컨트롤 생성
+        map.addControl(mapTypeControl, window.kakao.maps.ControlPosition.TOPRIGHT); // 오른쪽위에 표시 정의
+        const zoomControl = new window.kakao.maps.ZoomControl(); // 지도 확대 축소를 제어할 수 있는 줌 컨트롤러
+        map.addControl(zoomControl, window.kakao.maps.ControlPosition.RIGHT);
       });
     };
-    script.onerror = () => {
-      console.log('카카오 API 지도 로드 실패');
-    };
+    script.onerror = () => {};
     return () => {
       document.head.removeChild(script); // 제거
     };
@@ -219,7 +222,7 @@ const SearchPage = () => {
       <div className="grid">
         {selectedPlaces.map((place, index) => (
           <div key={index} className="place-card">
-            <text>출발지 - {place.address}</text>
+            <h4>출발지 - {place.address}</h4>
             {/* <button onClick={() => handleEditClick(index)}>편집</button>
             <button onClick={() => handleDeleteClick(index)}>삭제</button> */}
           </div>
@@ -236,6 +239,11 @@ const SearchPage = () => {
         <button className="search-button" onClick={handleFindCenter}>
           중간지점 찾기
         </button>
+        <ShareMiddlePoint
+          middlePoint={{
+            address: midAddress,
+          }}
+        />
       </div>
       {midCoords && (
         <div>
@@ -243,6 +251,11 @@ const SearchPage = () => {
         </div>
       )}
       <div id="map" className="map-container"></div>
+      <div className="share-button-container">
+        <button className="share-button">
+          <img src={ShareIcon} alt="공유하기" />
+        </button>
+      </div>
       {showPostCode && (
         <Backdrop onClick={() => setShowPostCode(false)}>
           <PostCode key="postcode" setAddress={setAddress} setPostCodeModal={setShowPostCode} addSelectedPlace={addSelectedPlace} />

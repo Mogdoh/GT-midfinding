@@ -111,3 +111,14 @@
 
 .circle-button:hover {
 }
+
+.share-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  background: #41a0d5;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset -1px -2px 6px #186d9c, inset 2px 2px 6px rgba(37, 170, 199, 0.5), inset -2px -4px 12px rgba(43, 148, 208, 0.31), inset 4px 4px 12px #b8c4da;
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+}
