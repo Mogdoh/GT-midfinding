@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 
 .container {
   padding: 20px;
@@ -6,7 +6,7 @@
 
 .header {
   margin-bottom: 20px;
-  font-family: 'Black Han Sans';
+  font-family: "Black Han Sans";
   font-style: normal;
   font-size: 75px;
   line-height: 60px;
@@ -26,7 +26,8 @@
   width: 35%;
   height: 70px;
   background: linear-gradient(121.62deg, #ffffff 30.78%, #f1f1f1 83.52%);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset -1px -2px 6px #dedede, inset 2px 2px 6px rgba(255, 255, 255, 0.5), inset -2px -4px 12px #d3d3d3, inset 4px 4px 12px #efefef;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset -1px -2px 6px #dedede, inset 2px 2px 6px rgba(255, 255, 255, 0.5),
+    inset -2px -4px 12px #d3d3d3, inset 4px 4px 12px #efefef;
   border-radius: 20px;
 }
 
@@ -46,13 +47,14 @@
   border: 1px solid #ddd;
   padding: 10px;
   background: linear-gradient(121.62deg, #ffffff 30.78%, #f1f1f1 83.52%);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset -1px -2px 6px #dedede, inset 2px 2px 6px rgba(255, 255, 255, 0.5), inset -2px -4px 12px #d3d3d3, inset 4px 4px 12px #efefef;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset -1px -2px 6px #dedede, inset 2px 2px 6px rgba(255, 255, 255, 0.5),
+    inset -2px -4px 12px #d3d3d3, inset 4px 4px 12px #efefef;
   border-radius: 20px;
   height: 50px;
 }
 
 .place-card text {
-  font-family: 'Black Han Sans';
+  font-family: "Black Han Sans";
   color: #36454f;
 }
 
@@ -71,11 +73,12 @@
 .search-button {
   border: none;
   background-color: #2b8a6a;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset -1px -2px 6px #4a6907, inset 2px 2px 6px rgba(21, 151, 65, 0.5), inset -2px -4px 12px rgba(54, 228, 103, 0.31), inset 4px 4px 12px #5da38c;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset -1px -2px 6px #4a6907, inset 2px 2px 6px rgba(21, 151, 65, 0.5),
+    inset -2px -4px 12px rgba(54, 228, 103, 0.31), inset 4px 4px 12px #5da38c;
   border-radius: 20px;
   width: 200px;
   height: 50px;
-  font-family: 'Black Han Sans';
+  font-family: "Black Han Sans";
   font-size: 24px;
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -90,7 +93,8 @@
   align-items: center;
   padding: 10px;
   background: linear-gradient(121.62deg, #ffffff 30.78%, #f1f1f1 83.52%);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset -1px -2px 6px #dedede, inset 2px 2px 6px rgba(255, 255, 255, 0.5), inset -2px -4px 12px #d3d3d3, inset 4px 4px 12px #efefef;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset -1px -2px 6px #dedede, inset 2px 2px 6px rgba(255, 255, 255, 0.5),
+    inset -2px -4px 12px #d3d3d3, inset 4px 4px 12px #efefef;
   border-radius: 20px;
 }
 
@@ -112,13 +116,21 @@
 .circle-button:hover {
 }
 
+.share-button {
+  border: none;
+  justify-content: center;
+  margin-top: 30px;
+  background: #41a0d5;
+  box-shadow: inset -1px -2px 6px #186d9c, inset 2px 2px 6px rgba(37, 170, 199, 0.5),
+    inset -2px -4px 12px rgba(43, 148, 208, 0.31), inset 4px 4px 12px #b8c4da;
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  color: white;
+}
+
 .share-button-container {
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  background: #41a0d5;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset -1px -2px 6px #186d9c, inset 2px 2px 6px rgba(37, 170, 199, 0.5), inset -2px -4px 12px rgba(43, 148, 208, 0.31), inset 4px 4px 12px #b8c4da;
-  border-radius: 20px;
-  width: 200px;
-  height: 50px;
 }

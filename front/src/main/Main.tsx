@@ -1,12 +1,12 @@
-import '../style/Main.css';
-import friend from '../assets/friend.png';
-import my from '../assets/my.png';
-import { useNavigate } from 'react-router-dom';
+import "../style/Main.css";
+import friend from "../assets/friend.png";
+import my from "../assets/my.png";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/searchpage');
+    navigate("/searchpage");
   };
   return (
     <div>
@@ -27,7 +27,7 @@ const Main = () => {
           <img src={my} />
           <div className="location-title">내가 정하기</div>
           <div className="location-detail">
-            {' '}
+            {" "}
             내가 친구들의 주소 및 역을
             <br />
             작성하여 약속장소 중간지점을
