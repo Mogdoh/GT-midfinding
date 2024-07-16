@@ -1,5 +1,5 @@
-import React from 'react';
-import DaumPostcode from 'react-daum-postcode';
+import React from "react";
+import DaumPostcode from "react-daum-postcode";
 
 declare global {
   interface Window {
@@ -9,20 +9,9 @@ declare global {
 }
 
 interface PostCodeProps {
-  setAddress: (address: {
-    우편번호: string;
-    기본주소: string;
-    상세주소: string;
-    lat: number;
-    lng: number;
-  }) => void;
+  setAddress: (address: { 우편번호: string; 기본주소: string; 상세주소: string; lat: number; lng: number }) => void;
   setPostCodeModal: (isVisible: boolean) => void;
-  addSelectedPlace: (place: {
-    name: string;
-    address: string;
-    lat: string;
-    lng: string;
-  }) => void;
+  addSelectedPlace: (place: { name: string; address: string; lat: string; lng: string }) => void;
 }
 
 const PostCode: React.FC<PostCodeProps> = ({ setAddress, setPostCodeModal, addSelectedPlace }) => {
@@ -37,7 +26,7 @@ const PostCode: React.FC<PostCodeProps> = ({ setAddress, setPostCodeModal, addSe
       setAddress({
         우편번호: data.zonecode,
         기본주소: mainAddress,
-        상세주소: '',
+        상세주소: "",
         lat,
         lng,
       });
@@ -51,7 +40,7 @@ const PostCode: React.FC<PostCodeProps> = ({ setAddress, setPostCodeModal, addSe
 
       setPostCodeModal(false);
     } catch (error) {
-      console.error('좌표 변환 오류:', error);
+      console.error("좌표 변환 오류:", error);
     }
   };
 
